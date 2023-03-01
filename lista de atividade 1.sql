@@ -205,6 +205,7 @@ select pedido.idPedido, pedido.data_pedido ,cliente.nome from cliente inner join
 /*8*/
 select produto.nome, produto.preco, pedido.idPedido from itens_pedido inner join produto on itens_pedido.idProdutoFK = produto.idProduto inner join pedido on itens_pedido.idPedidoFK = pedido.idPedido where idPedido = '1';
 /*9*/
+select * from cliente left join pedido on pedido.idclientefk = cliente.idcliente;
 /*10*/
 select produto.preco, produto.nome, categoria.nome from produto inner join categoria on produto.idCategoriaFK = categoria.idCategoria inner join marca on produto.idMarcaFK = marca.idMarca order by produto.preco desc limit 0,1;
 /*11*/
